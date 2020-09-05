@@ -1,0 +1,14 @@
+body{
+  background-color: #a69887;
+}
+.main{
+  background-color: #fff;
+  width: 95%;
+  margin-top: 70px;
+  border-radius: 15px;
+  padding: 25px;
+}
+.main h1{
+  margin-bottom: 25px;
+  color: #d02f4d;
+}

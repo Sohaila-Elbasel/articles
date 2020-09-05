@@ -8,6 +8,7 @@ class Article(db.Model):
     content = db.Column(db.String, nullable = False)
     date_posted = db.Column(db.DateTime, default = datetime.utcnow)
     comments = db.relationship('Comment')
+    category = db.Column(db.String(25), nullable = False)
 
 class Comment(db.Model):
     __tablename__ = 'comments'
