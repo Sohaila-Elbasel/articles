@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <div class="">
+  <div class="article">
+    <p class="card-text"><small class="text-muted"><a href="{{ url_for('home') }}">home</a>/{{ article.title }}</small></p>
     <h1 class="article_title">{{ article.title }}</h1>
     <p class="card-text"><small class="text-muted">{{ article.date_posted }}</small></p>
     <p class="card-text"><small class="text-muted">5 comments</small></p>
@@ -14,8 +15,8 @@
     <div class="card border-light mb-3">
       <div class="card-header mb-4">Comments</div>
       <dl>
-        {% if comments %}
-          {% for comment in comments %}
+        {% if article.comments %}
+          {% for comment in article.comments %}
             <dt class="border-top">{{ comment.title }}</dt>
             <dd class="mb-5">{{ comment.content }}</dd>
           {% endfor %}

@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!-- Add comment -->
+  <div class="mt-5 ">
+    <div class="card border-light mb-3">
+      <div class="card-header mb-4">Add Article</div>
+        <form class="" action="" method="post">
+          {{ form.csrf_token }}
+          <div class="form-group">
+            {{ form.article_title.label }}
+            {{ form.article_title(class="form-control") }}
+          </div>
+          <div class="form-group">
+            {{ form.article_content.label }}
+            {{ form.article_content(class="form-control") }}
+          </div>
+          <div class="form-group">
+            {{ form.article_category.label }}
+            {{ form.article_category(class="form-control") }}
+          </div>
+          {{ form.article_submit(class="btn btn-danger") }}
+        </form>
+      </div>
+  </div>
+{% endblock %}

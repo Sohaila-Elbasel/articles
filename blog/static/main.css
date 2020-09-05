@@ -12,3 +12,6 @@ body{
   margin-bottom: 25px;
   color: #d02f4d;
 }
+.article .card-text a{
+  color: #000;
+}

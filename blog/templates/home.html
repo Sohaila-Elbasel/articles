@@ -12,8 +12,8 @@
               <h5 class="card-title">{{ article.title }}</h5>
               <p class="card-text">{{ article.content[:135] }}......</p>
               <p class="card-text"><small class="text-muted">{{ article.date_posted }}</small></p>
-              <p class="card-text"><small class="text-muted">5 comments</small></p>
-              <a class="btn btn-danger" href="#">See more</a>
+              <p class="card-text"><small class="text-muted">{{ article.comments|length }} comments</small></p>
+              <a class="btn btn-danger" href="{{ url_for('article', article_id=article.id) }}">See more</a>
             </div>
           </div>
 

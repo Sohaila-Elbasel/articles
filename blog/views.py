@@ -25,3 +25,17 @@ def article(article_id):
         return redirect(url_for('article', article_id = article_id))
 
     return render_template('article.html', article = article, form = form, comments = comments)
+
+
+@app.route('/article/add', methods=['POST', 'GET'])
+def add_article():
+    form = AddArticle()
+
+    #Add comment
+    if form.validate_on_submit():
+        article = Article(title=form.article_title.data, content = form.article_content.data, category = form.article_category.data)
+        db.session.add(article)
+        db.session.commit()
+        return redirect(url_for('home'))
+
+    return render_template('add_article.html', form = form)
