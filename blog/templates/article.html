@@ -8,7 +8,25 @@
     <p class="card-text">{{ article.content|safe}}</p>
   </div>
 
-  <div class="mt-5 border-bottom">
+<!-- Display Comments -->
+<div class="">
+  <div class="mt-5">
+    <div class="card border-light mb-3">
+      <div class="card-header mb-4">Comments</div>
+      <dl>
+        {% if comments %}
+          {% for comment in comments %}
+            <dt class="border-top">{{ comment.title }}</dt>
+            <dd class="mb-5">{{ comment.content }}</dd>
+          {% endfor %}
+        {% endif %}
+      </dl>
+    </div>
+  </div>
+</div>
+
+<!-- Add comment -->
+  <div class="mt-5 ">
     <div class="card border-light mb-3">
       <div class="card-header mb-4">Add Comment</div>
         <form class="" action="" method="post">
