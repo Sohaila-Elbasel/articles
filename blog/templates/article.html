@@ -5,7 +5,7 @@
     <p class="card-text"><small class="text-muted"><a href="{{ url_for('home') }}">home</a>/{{ article.title }}</small></p>
     <h1 class="article_title">{{ article.title }}</h1>
     <p class="card-text"><small class="text-muted">{{ article.date_posted }}</small></p>
-    <p class="card-text"><small class="text-muted">5 comments</small></p>
+    <p class="card-text"><small class="text-muted">{{ article.comments|length }} comments</small></p>
     <p class="card-text">{{ article.content|safe}}</p>
   </div>
 

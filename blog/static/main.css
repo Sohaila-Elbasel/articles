@@ -12,6 +12,11 @@ body{
   margin-bottom: 25px;
   color: #d02f4d;
 }
-.article .card-text a{
-  color: #000;
+.article .card-text a:link,
+.article .card-text a:visited{
+  color: #db0744;
+}
+.article .card-text a:hover,
+.article .card-text a:active{
+  color: gray;
 }
